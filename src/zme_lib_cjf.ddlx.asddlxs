@@ -1,0 +1,69 @@
+@Metadata.layer: #CORE
+
+@UI.headerInfo: {
+typeName: 'Libro',
+typeNamePlural: 'Libros',
+typeImageUrl: '',
+imageUrl: 'Imagen',
+title:{
+ type: #STANDARD,
+ value: 'Titulo'
+},
+description: {
+ type: #STANDARD,
+ value: 'Autor'
+}
+}
+@Search.searchable: true
+
+annotate entity ZC_LIB_CJF with 
+{
+   @UI:{ 
+          facet: [{ id: 'Detalles del Libro',
+                    label: 'Detalles del Libro',
+                    type: #COLLECTION,
+                    position:10 },
+                    
+                    { id: 'Libro',
+                    parentId: 'Detalleslibro',
+                    label: 'Detalles',
+                    type: #FIELDGROUP_REFERENCE,
+                    targetQualifier: 'Detalleslibro',
+                    position:10 },
+                    
+                    { id: 'Compradores',
+                    label: 'Compradores',
+                    type: #LINEITEM_REFERENCE,
+                    targetElement: '_Cliente',
+                    position:30 }],
+
+    fieldGroup: [{ qualifier: 'DetallesLibro',
+    position: 10 }]
+    
+}
+
+IdLibro;
+
+@UI:{ lineItem: [{ position: 10, importance: #HIGH }],
+      fieldGroup: [{ qualifier: 'DetalleCliente', position: 10  }] }
+Titulo;
+@Search.defaultSearchElement: true
+Formato;
+@UI:{ lineItem: [{ position: 40, importance: #HIGH }]}
+
+Idioma;
+@UI:{ lineItem: [{ position: 50, importance: #HIGH }]}     
+
+Paginas;
+@UI:{ lineItem: [{ position: 60, importance: #HIGH }]}  
+
+Precio;
+@UI:{ lineItem: [{ position: 70, label: 'Ventas', importance: #HIGH, value: 'description', criticality: 'Ventas' }]}  
+
+Ventas;
+  @UI:{ fieldGroup: [{ qualifier: 'DetallesLibro',
+    position: 30 }]}
+    
+
+description;
+}
