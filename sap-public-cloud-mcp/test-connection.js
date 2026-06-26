@@ -19,11 +19,11 @@ const HEADERS = {
   'sap-client': CLIENT
 };
 
-// URL base candidatas a probar si la principal falla
+// URL base candidatas a probar si la principal falla (tenant my413511)
 const CANDIDATES = [
   BASE,
-  'https://my413724.s4hana.ondemand.com',
-  'https://my413724-api.s4hana.cloud.sap'
+  'https://my413511-api.s4hana.cloud.sap',
+  'https://my413511.s4hana.cloud.sap'
 ];
 
 const TEST_PATH =

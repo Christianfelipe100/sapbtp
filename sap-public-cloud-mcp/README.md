@@ -3,8 +3,10 @@
 Lee toda la configuración accesible del tenant Public Cloud vía APIs OData
 públicas y la documenta en archivos JSON + Markdown. **Solo lectura.**
 
-- **Tenant objetivo:** `my413724` (Payless ShoeSource)
-- **Usuario:** `CFELIPE`
+- **Tenant objetivo:** `my413511` (`.s4hana.cloud.sap`)
+- **Host de API:** `https://my413511-api.s4hana.cloud.sap` (NO la URL del
+  Fiori Launchpad `my413511.s4hana.cloud.sap/ui#Shell-home`, que es la UI)
+- **Usuario:** comunicación/técnico con roles de lectura del tenant
 - **Output:** carpeta `output/` (un JSON por entidad + reporte legible)
 
 ## Requisitos
