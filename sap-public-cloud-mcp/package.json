@@ -1,0 +1,11 @@
+{
+  "name": "sap-public-cloud-mcp",
+  "version": "1.0.0",
+  "description": "Extractor de configuración SAP S/4HANA Public Cloud vía APIs OData públicas",
+  "type": "module",
+  "scripts": {
+    "extract": "node --env-file=.env extract.js",
+    "test:conn": "node --env-file=.env test-connection.js"
+  },
+  "license": "MIT"
+}
